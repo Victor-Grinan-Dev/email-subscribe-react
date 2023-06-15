@@ -10,7 +10,13 @@ npm install -D tailwindcss
 ```cmd
 npx tailwindcss init
 ```
-3- in the tailwind.config.js write this:
+3- add this to the index.css file:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+4- in the tailwind.config.js write this:
 ```js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -23,7 +29,7 @@ module.exports = {
   plugins: [],
 }
 ```
-4- finally fix the babel bug by installing:
+5- finally fix the babel bug by installing:
 ```cmd
 npm i -D @babel/plugin-proposal-private-property-in-object
 ```
